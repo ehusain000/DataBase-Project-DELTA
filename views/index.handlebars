@@ -1,0 +1,64 @@
+<h1 style="text-align: center;">DELTA:Music</h1>
+
+    <div class="column-container">
+
+        <div class="column-left">
+            <div class="container">        
+
+            <form action="/create" method="post">
+                <div>Username: <input type="text" name="Username"></div>
+                <div>Password: <input type="text" name="Password"></div>
+                <div>Firstname: <input type="text" name="Firstname"></div>
+                <div>Lastname: <input type="text" name="Lastname"></div>
+                <div>Email: <input type="text" name="Email"></div>
+                <button type="submit" value="Sign up">Sign up</button>
+            </form>
+
+            </div><!-- /.container -->
+            
+        </div><!--/.column left-->
+        
+        <div class="column-right">
+
+            <form action="/add_to_playlist" method="post">
+                <ul>
+                    {{#each trackList}}
+                        <li><input type="checkbox" name="track[{{@index}}]" value="{{trackID}}">{{name}}{{trackID}}</li>
+                    {{/each}}
+                </ul>
+                <br>
+                <br>
+                {{!-- {{if not exist not displaying the list}} --}}
+    
+                <select name="myPlaylists">
+                {{#each playList}}
+                    <option value="{{name}}" name="{{playlistID}}">{{name}}</option>
+                    
+                {{/each}}
+                </select>
+        
+                <button class="small-btn" type="submit" value="Add to the playlist">Add to the playlist</button>
+            </form> 
+
+        </div><!--/.column right-->
+    </div><!-- /.column-container-->
+
+
+    {{!-- <br>
+    <br>
+        {{#each trackList}}
+            <li>{{name}}</li>
+        {{/each}}
+    <br>
+    <br>
+        {{#each playList}}
+            <li>{{playlistID}}</li>
+        {{/each}}
+    <br>
+    <br>
+        {{#each artistList}}
+            <li>{{artistID}}</li>
+        {{/each}}
+    <br>
+    <br> --}}
+

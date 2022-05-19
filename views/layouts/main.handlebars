@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DELTA:Music</title>
+
+    {{!-- Links Style Sheet begins --}}
+    <link rel="stylesheet" href="/views/assets/css/reset.css">
+    <link rel="stylesheet" href="/views/assets/css/style.css">
+    {{!-- Links Style Sheet ends--}}
+
+
+</head>
+<body>
+    <div class="header">
+        {{> header}}
+    </div><!-- /.header-->
+
+    <div class="body {{template}}">
+        <div class="content-box">
+            <div class="container">
+                
+                {{{body}}} 
+        
+            </div>
+        </div>
+    </div><!-- /.body -->
+
+    <div class="footer">
+        {{> footer}}
+    </div>
+
+{{!-- Add scripts begins--}}
+<script src="jquery-3.3.1.min.js"></script>
+{{!-- Add scripts ends--}}
+
+</body>
+</html>

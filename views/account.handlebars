@@ -1,0 +1,10 @@
+<h1>MY Account</h1>
+
+<form method="post" action="/account/delete_playlist">
+<ul>
+    {{#each rows}}
+        <li><input type="radio" name="{{username}}" value="{{userID}}"><strong>Username:</strong> {{username}} <strong>Name:</strong> {{firstName}} {{lastName}} <strong>Email:</strong> {{email}}</li>
+    {{/each}}
+</ul>
+<button class="small-btn">Edit</button> <button class="small-btn" type="submit">Delete</button>
+</form>
